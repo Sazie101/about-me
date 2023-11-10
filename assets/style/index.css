@@ -12,6 +12,8 @@
 
 body {
     font-family: "Poppins", "Nunito Sans", Arial, sans-serif;
+    background-color: #1f252f;
+    color: #fff;
 }
 
 .container {
@@ -20,13 +22,22 @@ body {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 60px;
+}
+
+h2 {
+    font-size: 70px;
+}
+
+p {
+    font-size: 20px;
 }
 
 header, footer {
     height: 60px;
-    background-color: #f5f7fa;
+    background: none;
+    background-color: #1c202c;
 }
 
 .head, .foot {
@@ -34,14 +45,36 @@ header, footer {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    background-color: #f5f7fa;
 }
 
-.mid {
+main {
     height: 100dvh;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+video {
+    position: absolute;
     display: grid;
     place-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+.content {
+    padding: 200px 0;
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 100%;
+    color: #fff;
+}
+
 
 ul li {
     display: inline;
@@ -53,4 +86,17 @@ li a {
     color: #000;
     transition: all .2s ease-in-out;
     margin-left: 40px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 18px;
+    }
 }
