@@ -23,3 +23,6 @@ function create(element, parent = document) {
 function print(...args) {
     console.log(args.join(', '));
 }
+
+const project = select('.project');
+const projectPage = select('.projectPage');
