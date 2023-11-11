@@ -9,21 +9,20 @@
           front-end, html, css, javascript, react, sqi">
         <title>My Website</title>
         <link rel="stylesheet" href="./assets/style/index.css" media="all">
+        <script src="./assets/script/index.js" defer></script>
     </head>
     <body>
         <header>
-            <div class="container head">
+            <!-- <div class="container head">
                 <h1>My Website</h1>
                 <nav>
                     <ul>
-                        <li><a href="#aboutMe">About Me</a></li>
-                        <li><a href="#experience">Contact Me</a></li>
-                        <li><a href="#projects">Projects</a></li>
+                        <li><a id="about-me">About Me</a></li>
+                        <li><a id="projects">Projects</a></li>
+                        <li><a id="contact-me">Contact Me</a></li>
                     </ul>
                 </nav>
-            </div>
-        </header>
-        <main>
+            </div> -->
             <div class="hero center">
                 <div class="hero">
                     <video autoplay loop muted>
@@ -32,16 +31,63 @@
                     <div class="container content">
                         <h2>Hello World</h2>
                         <p>My name is Samuel Yazie and I am a web developer</p>
+                        <button>Hello</button>
                     </div>
                 </div>
             </div>
-            <div class="container about-me">
+        </header>
+        <main>
+            <!-- Hero Banner -->
+            
+            <!-- About Section -->
+            <div class="container aboutMe" id="aboutMe">
+                <h2>About Me</h2>
+                <p>
+                    My name is Samuel and I am constantly on the path of learning expanding my 
+                    knowledge in the world of programming. I feel very passionate about the field of 
+                    computer science and would love to one day be able to contribute to it. I will be posting 
+                    some of my best works and documenting my journey and I would love it if you would follow along.
+                </p>
+            </div>
+            <!-- Project Section -->
+            <div class="container projectPage" id="projects">
+                <h2>Projects</h2>
+                <div class="boxes">
+                    <div class="box first">
+                        <a>
+                            <div class="pro one">
+                                <img src="./assets/img/calculator.png" width="350" height="200">
+                                <h3>Calculator</h3>
+                            </div>
+                        </a>
+                        <a>
+                            <div class="pro two">
+                                <img src="./assets/img/Math-game.png" width="350" height="220">
+                                <h3>Math Game</h3>
+                            </div>  
+                        </a>          
+                    </div>
+                    <div class="box second">
+                        <a>
+                            <div class="pro three">
+                                <img src="./assets/img/word-counter.png" width="350" height="200">
+                                <h3>Word counter</h3>
+                            </div> 
+                        </a>
+                        <a>
+                            <div class="pro four">
+                                <img src="./assets/img/Digital clock.png" width="350" height="200">
+                                <h3>Digital Clock</h3>
+                            </div> 
+                        </a>
+                    </div>
+                </div>
                 
             </div>
-        </main>
-        <footer>
-            <div class="container foot">
+            <!-- Contact Section -->
+            <div class="container contactPage" id="contactMe">
+                <h2>Contact Me</h2>
             </div>
-        </footer>
+        </main>
     </body>
 </html>
