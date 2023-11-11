@@ -24,5 +24,19 @@ function print(...args) {
     console.log(args.join(', '));
 }
 
-const project = select('.project');
 const projectPage = select('.projectPage');
+const aboutMe = select('.aboutMe');
+const contactPage = select('.contactPage');
+const buttons = selectAll('.info');
+
+buttons.forEach((button) => {
+    onEvent('click', button, () => {
+        if (button.classList.contains('project')) {
+            projectPage.scrollIntoView({ behavior: 'smooth' });
+        } else if (button.classList.contains('about')) {
+            aboutMe.scrollIntoView({ behavior: 'smooth' });
+        } else if (button.classList.contains('contact')) {
+            contactPage.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});

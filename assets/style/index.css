@@ -21,6 +21,25 @@ body {
     margin-inline: auto;
 }
 
+footer {
+    height: 100px;
+    background-color:#13161b ;
+}
+
+.contacts {
+    text-align: center;
+}
+
+.link {
+    text-align: center;
+}
+
+footer a {
+    cursor: pointer;
+    border: none;
+    padding: 0 20px;
+}
+
 h1 {
     font-size: 30px;
     line-height: 60px;
@@ -80,6 +99,7 @@ img {
 
 .contactPage {
     margin-top: 200px;
+    text-align: center;
 }
 
 .pro h3 {
@@ -130,7 +150,7 @@ ul li {
     transition: all .1s ease-in-out;
 }
 
-li a {
+main li a {
     text-decoration: none;
     font-size: 18px;
     color: #fff;
@@ -141,7 +161,7 @@ li a {
     border-radius: 50px;
 }
 
-li a:hover {
+main li a:hover {
     background-color: #318fc7;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
