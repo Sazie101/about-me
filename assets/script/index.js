@@ -72,4 +72,33 @@ onEvent('resize', window, () => {
     checkWindowWidth();
 });
 
+onEvent('DOMContentLoaded', document, () => {
+    const sections = selectAll('.box a');
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function animateSections() {
+        sections.forEach((section) => {
+            if (isInViewport(section)) {
+                section.classList.add('in-view');
+            }
+        });
+    }
+
+    // Initial check on page load
+    animateSections();
+
+    // Check on scroll
+    onEvent('scroll', document, animateSections);
+});
+
+
 checkWindowWidth();
