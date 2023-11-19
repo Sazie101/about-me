@@ -150,8 +150,9 @@ video {
 h2 {
     padding-top: 200px;
     text-align: center;
-    font-size: 48px;
+    font-size: 64px;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .myInfo {
@@ -182,14 +183,20 @@ h2 {
     text-align: center;
     outline: none;
     color: #fff;
+    width: min-content;
     border: 1px solid transparent;
+    word-wrap: break-word;
 }
 
 .pro:hover {
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     outline: none;
     border: 1px solid #4e4eff;
     animation: anim 0.3s linear;
+}
+
+.pro p {
+    font-size: 15px;
 }
 
 #scrollToTopBtn {
