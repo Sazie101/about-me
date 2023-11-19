@@ -176,11 +176,11 @@ h2 {
     flex-wrap:wrap;
 }
 
-.box a {
-    margin-bottom: 60px;
+.part {
+    margin-bottom: 40px;
     opacity: 0;
-    transform: translateY(60px); /* Initial shift down, adjust as needed */
-    transition: opacity 0.2s ease, transform 0.5s ease;
+    transform: translateY(60px); 
+    transition: opacity 0.5s ease, transform 0.9s ease;
 }
 
 .in-view {
@@ -262,6 +262,7 @@ h2 {
 
 .contactMe h2 {
     margin-bottom: 30px;
+    padding-top: 140px !important;
 }
 
 .github img {

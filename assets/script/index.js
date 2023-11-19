@@ -31,6 +31,7 @@ const aboutMe = select('.about');
 const contactPage = select('.contactMe');
 const buttons = selectAll('.info');
 const scrollToTopBtn = selectById('scrollToTopBtn');
+const sections = selectAll('.part');
 
 buttons.forEach((button) => {
     onEvent('click', button, () => {
@@ -72,33 +73,29 @@ onEvent('resize', window, () => {
     checkWindowWidth();
 });
 
-onEvent('DOMContentLoaded', document, () => {
-    const sections = selectAll('.box a');
+function checkInView(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+function animateSections() {
+    sections.forEach((section) => {
+        if (checkInView(section)) {
+            section.classList.add('in-view');
+        } else {
+            section.classList.remove('in-view');
+        }
+    });
+}
 
-    function animateSections() {
-        sections.forEach((section) => {
-            if (isInViewport(section)) {
-                section.classList.add('in-view');
-            }
-        });
-    }
+onEvent('load', window, animateSections)
 
-    // Initial check on page load
-    animateSections();
-
-    // Check on scroll
-    onEvent('scroll', document, animateSections);
-});
+onEvent('scroll', document, animateSections);
 
 
 checkWindowWidth();
