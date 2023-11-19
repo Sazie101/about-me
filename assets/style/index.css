@@ -8,12 +8,14 @@
     vertical-align: baseline;
     font: inherit;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
     font-family: "Poppins", "Nunito Sans", Arial, sans-serif;
-    background-color: #13161b;
+    background-color: #11121a;
     color: #fff;
+    height: 100vh;
 }
 
 .container {
@@ -21,185 +23,266 @@ body {
     margin-inline: auto;
 }
 
-footer {
-    height: 100px;
-    background-color:#13161b ;
+header, footer {
+    height: 60px;
 }
 
-.contacts {
-    text-align: center;
-}
-
-.link {
-    text-align: center;
-}
-
-footer a {
-    cursor: pointer;
-    border: none;
-    padding: 0 20px;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+h1 , nav ul li {
     line-height: 60px;
 }
 
-h2 {
-    font-size: 70px;
-    margin: 20px 0;
+.head-content {
+    display: flex;
+    justify-content: space-between;
 }
 
-p {
-    font-size: 20px;
-    margin: 20px 0;
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.head-content a {
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+}
+
+.head-content a:hover {
+    color: #2266ff;
+}
+
+.menus ul li, #hamburger{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+#hamburger {
+    cursor: pointer;
+}
+
+.menus ul li {
+    line-height: 60px;
+}
+
+#hamburger, .menus {
+    display: none;
+}
+
+.navigation .contact {
+    padding: 10px 20px;
+    background-color: #0000ff;
+    border-radius: 5px;
+}
+
+.navigation .contact:hover {
+    background-color: #11118b;
+    color: #fff !important;
+}
+
+/*******************************************/
+/*************** Hero **********************/
+/*******************************************/
+
+main {
+    min-height: calc(100vh - 120px);
 }
 
 .hero {
     position: relative;
     overflow: hidden;
+    height: 100vh;
     width: 100%;
+}
+
+.hero h2, p {
+    font-size: 30px;
+}
+
+.hero p {
+    margin-top: 30px;
 }
 
 video {
-    position: absolute;
-    display: grid;
-    place-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .content {
-    background: transparent;
-    padding: 300px 0;
-    position: relative;
-    display: grid;
-    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     color: #fff;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), #11121a);
 }
 
-.aboutMe {
+/*******************************************/
+/*************** About Me ******************/
+/*******************************************/
+
+h2 {
+    padding-top: 200px;
     text-align: center;
+    font-size: 48px;
+    letter-spacing: 1px;
 }
 
-img {
-    border-radius: 10px;
-}
-
-.pro {
-    text-align: center;
-    padding: 10px;
-    background-color: #222634;
-    border-radius: 10px;
-}
-
-.projectPage {
-    margin-top: 200px;
-}
-
-.contactPage {
-    margin-top: 200px;
-    text-align: center;
-}
-
-.pro h3 {
-    margin-top: 20px;
-}
-
-.box {
-    margin-top: 20px;
+.myInfo {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+}
+
+.about-meInfo {
+    display: grid;
+    place-items: center;
+}
+
+/*******************************************/
+/*************** Projects ******************/
+/*******************************************/
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap:wrap;
 }
 
-main h2 {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.aboutMe {
-    padding: 50px 0;
-    margin-top: 200px;
-    text-align: center;
-    background-color: #000;
-}
-
-ul li {
-    display: inline;
-    list-style: none;
-}
-
-.info {
-    margin-top: 10px;
-    padding: 15px 30px;
-    background-color: #2e64ba;
-    opacity: 1;
-    border-radius: 50px;
-    color: #fff;
-}
-
-.project {
-    text-align: center;
-}
-
-.info:hover {
+.pro {
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .1s ease-in-out;
+    background-color: #212232;
+    padding: 20px;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    border: 1px solid transparent;
 }
 
-main li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
+.pro:hover {
     transition: all .2s ease-in-out;
-    margin-left: 20px;
-    padding: 10px 20px;
-    background-color: #2d84b7;
-    border-radius: 50px;
+    outline: none;
+    border: 1px solid #4e4eff;
+    animation: anim 0.3s linear;
 }
 
-main li a:hover {
-    background-color: #318fc7;
-    transition: all 0.2s ease-in-out;
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 50%;
+    padding: 17px 20px;
     cursor: pointer;
 }
 
-.aboutMe h2 {
-    text-align: center;
+@keyframes anim {
+    0% {
+        scale: 1.01;
+
+    }
+
+    100% {
+        scale: 1.00;
+    }
 }
 
 .box a {
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 10px;
-    color: #fff;
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 24px;
-        line-height: 50px;
+.pro h3 {
+    margin: 10px 0;
+}
+
+/*******************************************/
+/*************** Contacts ******************/
+/*******************************************/
+
+.contactMe {
+    display: grid;
+    place-items: center;
+}
+
+.contacts {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.link a {
+    padding: 0 10px;
+}
+
+.contactMe h2 {
+    margin-bottom: 30px;
+}
+
+.github img {
+    filter: invert(1);
+}
+
+/*******************************************/
+/************ Responsive Design ************/
+/*******************************************/
+
+@media (max-width: 910px) {
+    nav ul li {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+    h2{
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+    .myInfo {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 720px) {
+    nav ul li {
+        display: none;
+    }
+    #hamburger {
+        display: block;
     }
     h2 {
-        font-size: 50px;
+        font-size: 35px;
     }
     p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
         font-size: 20px;
-        line-height: 45px;
-    }
-    h2 {
-        font-size: 45px;
-    }
-    p {
-        font-size: 14px;
     }
 }

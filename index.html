@@ -7,100 +7,121 @@
         <meta name="description" content="Samuel Yazie web developer">
         <meta name="keywords" content="web developer, web, developer, 
           front-end, html, css, javascript, react, sqi">
-        <title>My Website</title>
+        <title>Samuel Yazie Portfolio</title>
         <link rel="stylesheet" href="./assets/style/index.css" media="all">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+        integrity="sha384-lZqNlA8qJ7i7XJA7jM2DO/zlpzFgi1Or1RB/NhZOIYYaFeJp1lCKBBxI9S3cKJwS" crossorigin="anonymous">
         <script src="./assets/script/index.js" defer></script>
     </head>
     <body>
         <header>
-            <div class="hero center">
-                <div class="hero">
-                    <video autoplay loop muted>
-                        <source src="./assets/img/network_-_12716 (1080p).mp4" type="video/mp4">
-                    </video>
-                    <div class="container content">
-                        <h2>Hello World</h2>
-                        <p>My name is Samuel Yazie and I am a web developer</p>
-                        <button class="info project">Projects</button>
+            <div class="container head-content">
+                <div>
+                    <h1>Samuel Yazie</h1>
+                </div>
+                <div>
+                    <nav class="navigation">
+                        <ul>
+                            <li><a class="info aboutMe" href="#about">About Me</a></li>
+                            <li><a class="info myProject" href="#projects">Projects</a></li>
+                            <li><a class="info contact" href="#contact">Contact me</a></li>
+                            <li id="hamburger"><img src="./assets/img/bars-solid.svg" width="20" height="20"></li>
+                        </ul>
+                    </nav>
+                    <div class="menus">
+                        <nav>
+                            <ul>
+                                <li><a class="menu info aboutMe" href="#about">About Me</a></li>
+                                <li><a class="menu info projects" href="#projects">Projects</a></li>
+                                <li><a class="menu info contact" href="#contact">Contact me</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </header>
         <main>
-            <!-- Project Section -->
-            <div class="projectPage" id="projects">
-                <h2>Projects</h2>
-                <div class="boxes">
-                    <div class="box first">
-                        <a>
-                            <div class="pro one">
-                                <img src="./assets/img/calculator.png" width="350" height="200">
+            <button id="scrollToTopBtn"><img src="./assets/img/arrow-up-solid.svg" width="20" height="20"></button>
+            <section class="hero">
+                <video autoplay loop muted>
+                    <source src="./assets/img/1117 (2).mp4" type="video/mp4">
+                </video>
+                <div class="content">
+                    <h2>Hello world</h2>
+                    <p>I'm Samuel Yazie a full stack Developer student residing in Winnipeg, Manitoba.</p>
+                </div>
+            </section>
+            <section class="about">
+                <div class="container about-me">
+                    <h2>About Me</h2>
+                    <div class="myInfo">
+                        <div>
+                            <img src="./assets/img/Profile.png" width="400" height="400">
+                        </div>
+                        <div class="about-meInfo">
+                            <p>
+                                My name is Samuel and I am a web Developer studying at Manitoba Institute
+                                of trades and technology. I have always had an intreset and love for coding 
+                                ever since since discovering the course in the 9th grade I am constantly on 
+                                the journey of improvements and looking to always learn new things.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="projectPage">
+                <div class="container">
+                    <h2>My Projects</h2>
+                    <div class="box">
+                        <a href="https://sazie101.github.io/simple-calculator/index.html">
+                            <div class="pro">
+                                <img src="./assets/img/calculator.png" width="290" height="170">
                                 <h3>Calculator</h3>
                             </div>
                         </a>
-                        <a>
-                            <div class="pro two">
-                                <img src="./assets/img/Math-game.png" width="350" height="220">
+                        <a href="https://sazie101.github.io/cool-math-game/">
+                            <div class="pro">
+                                <img src="./assets/img/Math-game.png" width="290" height="170">
                                 <h3>Math Game</h3>
                             </div>  
                         </a>        
-                        <a>
-                            <div class="pro three">
-                                <img src="./assets/img/client detection.png" width="350" height="220">
+                        <a href="https://sazie101.github.io/client-detection/">
+                            <div class="pro">
+                                <img src="./assets/img/client detection.png" width="290" height="170">
                                 <h3>Client detection</h3>
                             </div>  
-                        </a>     
-                    </div>
-                    <div class="box second">
-                        <a>
-                            <div class="pro four">
-                                <img src="./assets/img/word-counter.png" width="350" height="200">
+                        </a> 
+                        <a href="https://sazie101.github.io/word-counter/">
+                            <div class="pro">
+                                <img src="./assets/img/word-counter.png" width="290" height="170">
                                 <h3>Word counter</h3>
                             </div> 
                         </a>
-                        <a>
-                            <div class="pro five">
-                                <img src="./assets/img/Digital clock.png" width="350" height="200">
+                        <a href="https://sazie101.github.io/digital_clock/">
+                            <div class="pro">
+                                <img src="./assets/img/Digital clock.png" width="290" height="170">
                                 <h3>Digital Clock</h3>
                             </div> 
                         </a>
-                        <a>
-                            <div class="pro six">
-                                <img src="./assets/img/guessing game.png" width="350" height="220">
+                        <a href="https://sazie101.github.io/guessing-game/">
+                            <div class="pro">
+                                <img src="./assets/img/guessing game.png" width="290" height="170">
                                 <h3>Guessing game</h3>
                             </div>  
-                        </a>   
+                        </a> 
                     </div>
-                </div> 
-                <div class="project">
-                    <button class="info about">About me</button>
                 </div>
-            </div>
-            <!-- About Section -->
-            <div class="aboutMe" id="aboutMe">
-                <h2>About Me</h2>
-                <img src="./assets/img/Profile.png" width="400" height="400">
-                <p>
-                    My name is Samuel and I am a web Developer studying at Manitoba Institute
-                    of trades and technology. I have always had an intreset and love for coding 
-                    ever since since discovering the course in the 9th grade I am constantly on 
-                    the journey of improvements and looking to always learn new things.
-                </p>
-                <div class="project">
-                    <button class="info contact">Contact me</button>
-                </div>
-            </div>
-            <!-- Contact Section -->
-            <div class="container contactPage" id="contactMe">
-                <h2>Contact Me</h2>
-                <p>You can contact me using GitHub or outlook</p>
-            </div>
+            </section>
+            <section class="contactMe">
+                <h2>Get in touch</h2>
+                <p>You can contact me using GitHub or instagram</p>
+            </section>
         </main>
         <footer>
             <div class="container contacts">
                 <div class="link">
-                    <a href="https://github.com/Sazie101">
-                        <img src="./assets/img/GitHub.png" width="50" height="50">
+                    <a class="github" href="https://github.com/Sazie101">
+                        <img src="./assets/img/github.svg" width="50" height="50">
                     </a>
                     <a href="https://www.instagram.com/sazie1013/">
                         <img src="./assets/img/Instagram_icon.png.webp" width="50" height="50">
