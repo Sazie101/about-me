@@ -183,7 +183,9 @@ h2 {
     text-align: center;
     outline: none;
     color: #fff;
+    width: min-content;
     border: 1px solid transparent;
+    word-wrap: break-word;
 }
 
 .pro:hover {
@@ -191,6 +193,10 @@ h2 {
     outline: none;
     border: 1px solid #4e4eff;
     animation: anim 0.3s linear;
+}
+
+.pro p {
+    font-size: 15px;
 }
 
 #scrollToTopBtn {
