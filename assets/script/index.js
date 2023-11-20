@@ -87,8 +87,6 @@ function animateSections() {
     sections.forEach((section) => {
         if (checkInView(section)) {
             section.classList.add('in-view');
-        } else {
-            section.classList.remove('in-view');
         }
     });
 }
