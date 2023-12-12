@@ -214,6 +214,7 @@ h2 {
 #scrollToTopBtn {
     display: none;
     position: fixed;
+    z-index: 2;
     bottom: 20px;
     right: 20px;
     background-color: #007BFF;
